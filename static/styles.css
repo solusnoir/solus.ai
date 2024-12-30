@@ -1,0 +1,234 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: auto;
+  scroll-behavior: smooth; /* Smooth scroll behavior */
+  background-color: #111;
+  color: white;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+.header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  transition: height 0.3s ease;
+  z-index: 1;
+}
+
+#main-title {
+  font-size: 10vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 10;
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  margin: 0 15px;
+}
+
+/*spotify*/
+
+.spotify-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+}
+
+.spotify {
+  width: 70%;
+  padding-top: 20px;
+}
+
+/* Content */
+.content {
+  padding: 300px 20px;
+  text-align: center;
+}
+
+.youtube {
+  display: flex;
+  padding: 300px;
+  text-align: center;
+  background-color: #222121;
+  justify-content: center; /* Centers horizontally */
+}
+
+.youtube-content {
+  width: 80%;
+}
+
+.extra-content {
+  padding: 300px 20px;
+  text-align: center;
+  background-color: #333;
+}
+
+/* Scrolled State */
+.header.scrolled {
+  height: 60px; /* Shrinks header to navbar height */
+}
+
+#main-title {
+  font-size: 8vw; /* Slightly smaller at scroll */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #main-title {
+    font-size: 15vw;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Container for the main content */
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+/* Header styling */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Paragraph and description */
+p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* File input and submit button styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+form input[type="file"] {
+  padding: 12px;
+  font-size: 1.1em;
+  background-color: #333;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button {
+  padding: 12px 20px;
+  background-color: #444;
+  color: white;
+  border: none;
+  font-size: 1.1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #666;
+}
+
+/* Loading indicator */
+#loading {
+  font-size: 1.5em;
+  color: #00ff00;
+  margin-top: 20px;
+}
+
+/* Results styling */
+#results {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.result {
+  padding: 20px;
+  background-color: #333;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.result-header {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #00ff00;
+  margin-bottom: 10px;
+}
+
+.result div {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.result p {
+  font-size: 1.4em;
+}
+
+.result p strong {
+  color: #00ff00; /* Bright green for results */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    margin-top: 30px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  form button {
+    width: 100%;
+    font-size: 1.2em;
+  }
+}
